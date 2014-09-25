@@ -174,14 +174,14 @@ img.bg {
 
 .addWrap {
     width:100%;
-    margin:10px;
+    margin-left:10px;
+    margin-right:10px;
     overflow:auto;
     ul {
         color:white;
     }
     h2 {
         text-align:center;
-        text-decoration:underline;
     }
 
 }
@@ -221,7 +221,7 @@ aside {
 
 input, textarea {
     background-color:rgba(0,0,0,.6);
-    border:none; border-bottom:1px white solid;
+    border:none;
     color:white;
 }
 
@@ -231,6 +231,8 @@ select {
 }
 
 ////////////////////////////END ADDRECIPE
+
+ 
 .slide {
     position: absolute;
     width:100%;

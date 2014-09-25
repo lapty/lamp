@@ -125,13 +125,13 @@ img.bg {
 
 .addWrap {
   width: 100%;
-  margin: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   overflow: auto; }
   .addWrap ul {
     color: white; }
   .addWrap h2 {
-    text-align: center;
-    text-decoration: underline; }
+    text-align: center; }
 
 section {
   display: inline-block;
@@ -163,7 +163,6 @@ aside {
 input, textarea {
   background-color: rgba(0, 0, 0, 0.6);
   border: none;
-  border-bottom: 1px white solid;
   color: white; }
 
 select {
