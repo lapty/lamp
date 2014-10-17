@@ -1,0 +1,44 @@
+<div class="container">
+<div class="addWrap">
+
+<section>
+    <h2>Add a new recipe</h2>
+<form action="">
+    <div class="col1">
+  <h3>Title:</h3><input type="text" ng-model="newRecipe.title" placeholder="Title"></p>
+  <h3>Serves:</h3><input type="number" ng-model="newRecipe.serves" placeholder="Serves"></p>
+  <h3>Ingredients:</h3><p>
+  <input type="number" style="width:70px;" ng-model="ingredients.amount" placeholder="Amount">
+  <select ng-model="ingredients.type">
+    <option value="cup">cups</option>
+    <option value="tbsp">tbsp</option>
+    <option value="tsp">tsp</option>
+    <option value="oz">ounces</option>
+    <option value="pints">pints</option>
+    <option value="qts">quarts</option>
+    <option value="gallons">gallons</option>
+</select></p>
+  <input type="text" placeholder="Ingredient" ng-model="ingredients.name">
+  <button ng-click="addIngredient(ingredients)">ADD</button>
+</div>
+    <div class="col2">
+  <h3>Instructions:</h3>
+  <textarea ng-model="newRecipe.instructions" name="" id="" cols="23" rows="5"></textarea><br>
+  <button type="submit" ng-click="recipeSubmit(newRecipe)">SUBMIT</button>
+</form>
+    </div>
+</section>
+
+<aside>
+  <h2>Recipe Preview</h2>
+  <h3>{{newRecipe.title}}</h3>
+  <ul>
+    <li ng-repeat="ingredient in ingredientArray">
+      <h4>{{ingredient.amount}} {{ingredient.type}} {{ingredient.name}} </h4>
+    </li>
+  </ul>
+  <h3>Directions:</h3>
+  <textarea= class="directions">{{newRecipe.instructions}}</textarea>
+</aside>
+</div>
+</div>

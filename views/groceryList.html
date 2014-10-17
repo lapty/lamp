@@ -1,0 +1,38 @@
+<div class="container">
+<div class="groceryWrap" ng-controller="groceryController">
+<h2>Groceries:</h2>
+  <ul>
+    <li ng-repeat="item in groceryList track by $index">
+      <div ng-if="item.type != null">
+        <span>{{item.name}}</span>
+        <i class="fa fa-times fa-1" ng-click="deleteGrocery($index)"></i>
+      </div>
+      <div ng-if="item.type === null && item.amount != null">
+        <span>{{item.amount}}</span>
+        <span>{{item.name}}</span>
+        <i class="fa fa-times fa-1" ng-click="deleteGrocery($index)"></i>
+      </div>
+      <div ng-if="item.type === null && item.amount === null">
+        <span>{{item.name}}</span>
+        <i class="fa fa-times fa-1" ng-click="deleteGrocery($index)"></i>
+      </div>
+    </li>
+  </ul>
+  <form>
+    <h3>Add grocery item:</h3>
+    <input type="text" ng-model="groceryItem.amount" placeholder="1/2">
+    <select ng-model="groceryItem.type">
+      <option value="cup">cups</option>
+      <option value="tbsp">tbsp</option>
+      <option value="tsp">tsp</option>
+      <option value="oz">ounces</option>
+      <option value="pints">pints</option>
+      <option value="qts">quarts</option>
+      <option value="gallons">gallons</option>
+    </select>
+    <input type="text" placeholder="Ingredient" ng-model="groceryItem.name">
+    <button class="add-btn" ng-click="additem(groceryItem)">Add</button>
+
+  </form>
+</div>
+</div>
